@@ -1,5 +1,10 @@
 #include<stdio.h>
 
+void init_variable_size_array(){
+    int size=10;
+    int array[size] = {0};  //Compile error: variable-sized object may not be initialized
+}
+
 int main(void)
 {
     int M = 2;
@@ -14,5 +19,7 @@ int main(void)
         }
         printf("\n");
     }
+
+    init_variable_size_array();
     return 0;
 }
